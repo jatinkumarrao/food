@@ -1,0 +1,13 @@
+<input type="text" class="form-control" (input)="onUpdateServerName($event)">
+<input type="text" class="form-control" [(ngModel)]="serverName">
+<p>{{serverName}}</p>
+<h3>Success from success-component</h3>
+<input type="button" class="btn btn btn-info" value="Disable" [disabled]="!buttonclick" (click)="clickme()">
+<p>{{ servercreationserver }}</p>
+<p>{{buttonclick}}</p>
+<!--<p [innerText]="buttonclick"></p>-->
+
+<input type="text" class="form-control" [(ngModel)]="textfieldname">
+<input type="button" class="btn btn btn-info" value="Disable" [disabled]="textfieldname===''" (click)="textfieldname=''" >
+<!--<button class="btn btn btn-info" [disabled]="!whenbuttonclick" (click)="clickbutton()">Reset Buttton</button>-->
+<p>{{whenbuttonclick}}</p>

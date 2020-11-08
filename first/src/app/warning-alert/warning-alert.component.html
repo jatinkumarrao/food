@@ -1,0 +1,8 @@
+<h3>warining from warning-component</h3>
+<input type="text" class="form-control" [(ngModel)]="help">
+<input  type="button" class="btn btn btn-warning" value="Submit" (click)="clickme()" [disabled]="help===''">
+<p *ngIf="serverCreated; else noServer">{{servername}}</p>
+<ng-template #noServer>
+<p >no server created</p>
+</ng-template>
+<p [ngStyle]='{backgroundColor: getColor()}' [ngClass]="{online: getStatus==='online'}">{{ getServerStaus() }}</p>
